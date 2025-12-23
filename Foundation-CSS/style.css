@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif; /* Sets a default font family for the entire document */
+  line-height: 1.6; /* Sets a default line height for better readability */
+  color: #333; /* Sets a default text color */
+  background-color: #f4f4f4; /* Sets a default background color for the page */
+  min-height: 100vh; /* Ensures the body always takes up at least the full viewport height */
+  display: flex; /* Can be used for basic layout, e.g., centering content */
+  flex-direction: column; /* Often used with display: flex for vertical stacking */
+}
+
+.parent-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    border: 5px solid black;
+    border-radius: 20px;
+    min-height: 100vh;
+    margin: 20px;
+}
+
+.parent-container > * {
+    flex: 1;
+    margin: 5px;
+    border: 5px solid black;
+    border-radius: 20px;
+}
+
+.child1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.child1 > * {
+    flex: 1;
+    margin: 5px;
+    border: 5px solid black;
+    border-radius: 20px;
+}
+
+@media (min-width: 750px) {
+    .child1 {
+        flex-direction: row;
+    }
+}
+
+/*
+Notes:
+1. I had this doubt, I am not setting and height of width inside
+    any of the child containers (child or grandchild), then how is
+    it that the children are filling up the space inside the parent
+    containers? Well, the answer is pretty simple actually, by default
+    the children are bunched up at the start of the container on the 
+    primary axis, and they will stretch out to the fill the entire 
+    container on the cross-axis. Now, we are making a change to the 
+    primary axis behaviour when we set 'flex: 1', we are saying the 
+    children can GROW to fill up the available space, and the space 
+    will be distributed propotionally between the children (flex items).
+    We are also telling that the items can shrink when needed, but that's
+    not the focus rn.
+*/
