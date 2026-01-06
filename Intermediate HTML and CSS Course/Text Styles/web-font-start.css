@@ -1,0 +1,57 @@
+/* General setup */
+
+@font-face {
+    font-family: 'ChunkFive';
+    src: url('fonts/ChunkFive-Regular.woff2') format('woff2'),
+        url('fonts/ChunkFive-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('fonts/SourceSansPro-Regular.woff2') format('woff2'),
+        url('fonts/SourceSansPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+html {
+  font-size: 10px;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+body {
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Typography */
+
+h1 {
+  font-size: 3.2rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
+h1, h2 {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.2rem;
+}
+
+p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  word-spacing: 0.6rem;
+  font-family: "Atkinson Hyperlegible Mono", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
