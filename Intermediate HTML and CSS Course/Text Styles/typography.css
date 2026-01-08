@@ -1,0 +1,62 @@
+html {
+    /* 
+    Method 2: There's the possibility that the text will get too small on narrow screens
+    and too big on wide screens. To solve this use clamp () function (method 3)
+    */
+    /* font-size: calc(0.75rem + 1.5vw); */
+
+    /* Method 3 clamp(min, preferred, max)*/
+    font-size: clamp(1rem, 0.75rem + 1.5vw, 2rem);
+}
+body {
+  margin: 0 var(--metric-box-spacing);
+}
+
+p {
+  max-inline-size: initial;
+  margin-block-start: var(--metric-box-spacing);
+}
+
+/* 
+1. Setting line-length stops the text from just taking the entire width of the webpage
+2. You can't set the line-length directly as there is no such property, instead you can limit the size of
+    container itself by using the max-inline-size.
+3. Don't set line length using fixed units like px, because the users can scale their font size up and down
+    and your line length should adjust accordingly. Instead use a relative unit like rem or ch
+*/
+article {
+    margin: auto;
+    max-inline-size: 66ch;
+    line-height: 1.65;
+}
+
+blockquote {
+  margin:  var(--metric-box-spacing) auto;
+  padding:  var(--metric-box-spacing);
+  max-inline-size: 45ch;
+  line-height: 2;
+}
+/* 
+Method 1: Switching between fixed text sizes at specific breakpoints is quite jumpy.
+A more resposive approach is to let the device width influence the text size (method 2) 
+*/
+/* @media (min-width: 30em) {
+    html {
+        font-size: 125%;
+    }
+}
+@media (min-width: 40em) {
+    html {
+        font-size: 150%;
+    }
+}
+@media (min-width: 50em) {
+    html {
+        font-size: 175%;
+    }
+}
+@media (min-width: 60em) {
+    html {
+        font-size: 200%;
+    }
+} */
