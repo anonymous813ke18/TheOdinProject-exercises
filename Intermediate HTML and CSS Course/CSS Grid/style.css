@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 50px 50px;
+    grid-template-rows: 50px 50px;
+    grid-auto-rows: 50px;
+    gap: 100px 10px;
+
+    
+    /* 
+    grid-template: 50px 50px / 50px 50px
+    You can use this method too, the first two values are for the rows and 
+    the ones after the / are for the columns.
+
+    column-gap: 10px;
+    row-gap: 100px;
+    You can these properties to set the gap separately as well.
+     */
+}
+
+.container > div {
+    border: 1px solid rebeccapurple;
+}
