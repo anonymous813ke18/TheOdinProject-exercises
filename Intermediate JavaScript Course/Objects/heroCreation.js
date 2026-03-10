@@ -1,7 +1,8 @@
 function Hero (name, level) {
     this.name = name;
     this.level = level;
-    
+    this.HP = 100;
+    this.isAlive = true;
     //Just tried out of curiousity, don't do this
     // this.someFn = function () {
     //     console.log('Just some function.')
