@@ -35,3 +35,4 @@ const player1 = new Player("Hammad", "X", "Pakistani");
 const player2 = new Player("also Hammad", "O", "Arabian");
 
 console.log(`Player 1 is: ${player1.getName()} with marker ${player1.getMarker()} and nationality ${player1.nationality}\nPlayer 2 is: ${player2.getName()} with marker: ${player2.getMarker()} and nationality ${player2.nationality}`);
+console.log(`\n\nName ${player1.name}`)
